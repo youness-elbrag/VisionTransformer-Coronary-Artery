@@ -9,18 +9,21 @@ class Paramaters(TypeDict):
     attention_droput: float
     qkv_bias : bool
     eps: float
+    mlp_ratio : int
 
 
 
 def Intialize() -> Paramaters:
-    Config: Paramaters = { "image_size":256 ,
+    Config: Paramaters = {
+          "image_size":256 ,
           "patch_size":16,
           "embedding_size":256,
           "num_Channle":1,
           "hidden_dropout_prob": 0.0,
           "qkv_bias": True,
           "attention_droput":0.0
-        "eps": 1e-12
+          "eps": 1e-12 , 
+          "mlp_ratio": 4
 }
     return Config
 
