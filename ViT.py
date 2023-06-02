@@ -1,7 +1,6 @@
 import torch.nn as nn
 import torch 
-from TransformersEncoder import TransformersEncoder 
-
+from vit.TransformersEncoder import TransformersEncoder 
 
 """
 Doc : this file contain building blocks of ViT model 
