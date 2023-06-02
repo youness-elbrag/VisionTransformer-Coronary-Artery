@@ -1,6 +1,6 @@
-from typing import TypeDict
+from typing_extensions import TypedDict
 
-class Paramaters(TypeDict):
+class Paramaters(TypedDict):
     image_size : int
     patch_size : int
     embedding_size : int
@@ -12,9 +12,7 @@ class Paramaters(TypeDict):
     mlp_ratio : int
     initializer_range: float    
     num_classes : int
-
-
-
+        
 def Intialize() -> Paramaters:
     Config: Paramaters = {
           "image_size":256 ,
@@ -23,7 +21,7 @@ def Intialize() -> Paramaters:
           "num_Channle":1,
           "hidden_dropout_prob": 0.0,
           "qkv_bias": True,
-          "attention_droput":0.0
+          "attention_droput":0.0,
           "eps": 1e-12 , 
           "mlp_ratio": 4,
           "initializer_range":0.02,
@@ -31,6 +29,4 @@ def Intialize() -> Paramaters:
 
 }
     return Config
-
-
             
