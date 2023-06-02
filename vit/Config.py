@@ -8,6 +8,8 @@ class Paramaters(TypeDict):
     hidden_dropout_prob : float
     attention_droput: float
     qkv_bias : bool
+    eps: float
+
 
 
 def Intialize() -> Paramaters:
@@ -18,6 +20,7 @@ def Intialize() -> Paramaters:
           "hidden_dropout_prob": 0.0,
           "qkv_bias": True,
           "attention_droput":0.0
+        "eps": 1e-12
 }
     return Config
 
