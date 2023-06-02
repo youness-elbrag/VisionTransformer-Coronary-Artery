@@ -13,7 +13,7 @@ class MultiHeadAttention(nn.Module):
         self.w_v = nn.Linear(config["embedding_size"], config["embedding_size"],bias = config["qkv_bias"])
         self.w_concat = nn.Linear(config["embedding_size"], config["embedding_size"])
 
-    def forward(self, q, k, v):
+    def forward(self, q, k, v,output_attentions=False):
         # 1. dot product with weight matrices
         q, k, v = self.w_q(q), self.w_k(k), self.w_v(v)
 
@@ -21,7 +21,7 @@ class MultiHeadAttention(nn.Module):
         q, k, v = self.split(q), self.split(k), self.split(v)
 
         # 3. do scale dot product to compute similarity
-        out, attention = self.attention(q, k, v)
+        out, attention = self.attention(q, k, v,output_attentions=output_attentions)
 
         # 4. concat and pass to linear layer
         out = self.concat(out)
@@ -29,8 +29,10 @@ class MultiHeadAttention(nn.Module):
 
         # 5. visualize attention map
         # TODO : we should implement visualization
+        if not output_attentions:
+            return (out, None)
 
-        return out
+        return out , attention
 
     def split(self, tensor):
         """
@@ -48,6 +50,17 @@ class MultiHeadAttention(nn.Module):
         return tensor
 
     def concat(self, tensor):
+        """
+        inverse function of self.split(tensor : torch.Tensor)
+
+        :param tensor: [batch_size, head, length, d_tensor]
+        :return: [batch_size, length, d_model]
+        """
+        batch_size, head, length, d_tensor = tensor.size()
+        d_model = head * d_tensor
+
+        tensor = tensor.transpose(1, 2).contiguous().view(batch_size, length, d_model)
+        return tensornsor):
         """
         inverse function of self.split(tensor : torch.Tensor)
 
