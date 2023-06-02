@@ -1,6 +1,6 @@
 import torch.nn as nn 
 import torch
-from ScalProdcut import *
+from ScalProduct import ScaleDotProductAttention
 
 class MultiHeadAttention(nn.Module):
 
