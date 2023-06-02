@@ -1,7 +1,7 @@
 import torch.nn as nn 
 import torch
-import numpy as np 
-import Config 
+import numpy as np  
+from Blocks import Block
 
 """
 Doc : this file contain building blocks of ViT model 

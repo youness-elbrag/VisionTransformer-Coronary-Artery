@@ -10,6 +10,8 @@ class Paramaters(TypeDict):
     qkv_bias : bool
     eps: float
     mlp_ratio : int
+    initializer_range: float    
+    num_classes : int
 
 
 
@@ -23,7 +25,10 @@ def Intialize() -> Paramaters:
           "qkv_bias": True,
           "attention_droput":0.0
           "eps": 1e-12 , 
-          "mlp_ratio": 4
+          "mlp_ratio": 4,
+          "initializer_range":0.02,
+          "num_classes":2
+
 }
     return Config
 

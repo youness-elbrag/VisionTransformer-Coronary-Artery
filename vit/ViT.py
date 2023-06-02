@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch 
 from TransformersEncoder import TransformersEncoder 
 
+
 class VisionTransformer(nn.Module):
     """
     The ViT model for classification.
