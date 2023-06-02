@@ -5,7 +5,9 @@ class Paramaters(TypeDict):
     patch_size : int
     embedding_size : int
     num_Channle : int
-    hidden_dropout_prob : int
+    hidden_dropout_prob : float
+    attention_droput: float
+    qkv_bias : bool
 
 
 def Intialize() -> Paramaters:
@@ -13,7 +15,9 @@ def Intialize() -> Paramaters:
           "patch_size":16,
           "embedding_size":256,
           "num_Channle":1,
-          "hidden_dropout_prob": 0.0
+          "hidden_dropout_prob": 0.0,
+          "qkv_bias": True,
+          "attention_droput":0.0
 }
     return Config
 
