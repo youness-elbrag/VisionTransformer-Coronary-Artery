@@ -13,7 +13,7 @@ class Paramaters(TypedDict):
     initializer_range: float    
     num_classes : int
         
-def Intialize() -> Paramaters:
+def initializer() -> Paramaters:
     Config: Paramaters = {
           "image_size":256 ,
           "patch_size":16,
@@ -24,9 +24,8 @@ def Intialize() -> Paramaters:
           "attention_droput":0.0,
           "eps": 1e-12 , 
           "mlp_ratio": 4,
-          "initializer_range":0.02,
-          "num_classes":2
-
+          "initializer_range":0.0,
+          "num_classes":0.03
 }
     return Config
             
