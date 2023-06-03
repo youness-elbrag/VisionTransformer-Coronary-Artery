@@ -1,9 +1,14 @@
 import yaml
-from Config import Intialize
-import numpy as np
+from Config import initializer
+# import numpy as np
+# import torch.nn as nn 
+# import torch 
+# from torch.nn import functional as F
+# import matplotlib.pyplot as plt
+# import numpy as np 
 
 def write_config_to_yaml():
-    config = Initialize()
+    config = initializer()
     with open("config.yml", "w") as file:
         yaml.dump(config, file)
 

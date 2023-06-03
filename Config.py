@@ -19,7 +19,7 @@ class Paramaters(TypedDict):
     Data_Process: str
     num_workers: int
         
-def Intialize() -> Paramaters:
+def initializer() -> Paramaters:
     config: Paramaters = {
           "image_size":256 ,
           "patch_size":16,
