@@ -7,7 +7,7 @@ Check out this post for step-by-step guide on implementing ViT in detail.
 ### 1.1 Patch Embedding
 
 <div align="center">
-    <img src="/assets/__results___28_0.png"/>
+    <img src="/assets/__results___28_0.png" width="400" height="450"/>
 </div>
 
 <br><br>
