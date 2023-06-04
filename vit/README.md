@@ -74,7 +74,7 @@ class Embeddings(nn.Module):
 ### 1.2 Multi-Head Attention
 
 <div align="center">
-    <img src="/assets/heads.png" />
+    <img src="/assets/heads.gif" />
 </div>
 
 <br><br>
@@ -189,7 +189,7 @@ class ScaleDotProductAttention(nn.Module):
 ### 1.4 Layer Norm
 
 <div align="center">
-    <img src="/assets/layer_norm.png"/>
+    <img src="/assets/layer_norm.jpg"/>
 </div>   
 
 <br><br>
@@ -309,7 +309,7 @@ class TrasnfomerEncoder(nn.Module):
 ### Vision Transfomer model 
 
 <div align="center">
-    <img src="./assets/vit.git"/>
+    <img src="/assets/vit.git"/>
 </div>
 
 <br><br>
