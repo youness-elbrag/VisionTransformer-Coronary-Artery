@@ -5,18 +5,22 @@ from vit.TransformersEncoder import TransformersEncoder
 """
 Doc : this file contain building blocks of ViT model 
 ----------------------------------------------------
+in this codes we built Full ViT following :
 
-Patch_Embedding : split image into sub-Patch image 16x16
+Patch_Embedding
+---------------
+useed to Split the Image into Patches to process them as Token by TransformerEncoder
 
-Positional Emebedding : add Positional Encoding to Embedded input 
+Embeddings
+----------
+here we will add Poritional Encoding to Patch cause of the ViT doesn't know where 
+the Patch is come and allocated 
 
-Attention Module : is refer to Attention all you need Paper 
+VisionTransformer
+-----------------
+Vision-Transformer is actually used oly Encoder Part and same Blocks in Transfomres 
+only modification is MLP and Classifier
 
-Multi-Heads-Attention : make model learn Paralle 
-
-MLP : Mulit-Layer preceptence for Classfication 
-
-NormLayer : is used before MLP to normalize and stablize the model Transformer
 
 """
 

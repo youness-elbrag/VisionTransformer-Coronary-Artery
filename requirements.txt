@@ -1,0 +1,7 @@
+numpy
+torchmetrics
+matplotlib
+torch
+torchvision
+pytorch-lightning
+opencv-python
