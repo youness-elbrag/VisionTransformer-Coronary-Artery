@@ -1,11 +1,11 @@
 import yaml
 from Config import initializer
-# import numpy as np
-# import torch.nn as nn 
-# import torch 
-# from torch.nn import functional as F
-# import matplotlib.pyplot as plt
-# import numpy as np 
+import numpy as np
+import torch.nn as nn 
+import torch 
+from torch.nn import functional as F
+import matplotlib.pyplot as plt
+import numpy as np 
 
 def write_config_to_yaml():
     config = initializer()
@@ -21,20 +21,20 @@ def Loader_Data(path):
     return np.load(path).astype(np.float32)
 
 
-def visualize_attention(model, num_images=4, output=None, device="cuda"):
+def visualize_attention(model, Loading_Val,num_images=4, output=None, devices=devices):
     """
     Visualize the attention maps of the specified number of images.
     """
     model.eval()
 
     # Load random images
-    testset = Loading_DataFolder_Val
+    validation = Loading_Val
     classes = ['normal', 'abnormal']
 
     # Pick num_images samples randomly
-    indices = torch.randperm(len(testset))[:num_images]
-    raw_images = [np.asarray(testset[i][0]) for i in indices]
-    labels = [testset[i][1] for i in indices]
+    indices = torch.randperm(len(validation))[:num_images]
+    raw_images = [np.asarray(validation[i][0]) for i in indices]
+    labels = [validation[i][1] for i in indices]
     images = torch.stack([torch.from_numpy(image) for image in raw_images])
 
     # Move the images to the device

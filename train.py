@@ -1,5 +1,6 @@
 import torch
 import torchvision
+import argparse
 from torchvision import transforms
 from torchvision.datasets import DatasetFolder
 from torch.utils.data import DataLoader
@@ -105,7 +106,7 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--Config", type=str, required=True)
-    parser.add_argument("--device", type=str)
+    parser.add_argument("--device", type=str,required=True)
 
     args = parser.parse_args()
     if args.device is None:
@@ -125,13 +126,13 @@ if __name__ == "__main__":
     Epoch = config["Epoch"]
 
     Loading_Train =DatasetFolder(root=data_train +"train",
-                                                              loader=Loader_Data , 
-                                                              extensions="npy",
-                                                              transform=Transform_aug_Train)
+                                 loader=Loader_Data , 
+                                 extensions="npy",
+                                 transform=Transform_aug_Train)
     Loading_Val= DatasetFolder(root=data_train +"val",
-                                                           loader=Loader_Data , 
-                                                           extensions="npy",
-                                                           transform=Transform_aug_Val)
+                                loader=Loader_Data , 
+                                extensions="npy",
+                                transform=Transform_aug_Val)
     Training_Loader = DataLoader(Loading_Train,batch_size=batch_size,num_workers = 2, shuffle=True)
     Validation_Loader = DataLoader(Loading_Val,batch_size=batch_size,num_workers = 2, shuffle=False)
     Check_Point_Callbacks = ModelCheckpoint(
@@ -147,5 +148,6 @@ if __name__ == "__main__":
                      # Trainer = pl.Trainer(resume_from_checkpoint='./processed/logs/lightning_logs/version_0/checkpoints/epoch=60-step=6222.ckpt')
     Trainer.fit(ViT,Training_Loader,Validation_Loader)
     Trainer.save_checkpoint("./ViT.ckpt")
+    visualize_attention(model, num_images=3, output="attention.png")
 
     

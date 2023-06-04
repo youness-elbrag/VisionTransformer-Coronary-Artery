@@ -5,12 +5,14 @@ import torch
 from torch.nn import functional as F
 import matplotlib.pyplot as plt
 import numpy as np 
+from utils import Loader_Data
 
 
 def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--Path", type=str, required=True)
+    parser.add_argument("--Path_Checkpoint", type=str, required=True)
     parser.add_argument("--output", type=str,required=True)
 
     args = parser.parse_args()
@@ -45,10 +47,21 @@ if __name__ == "__main__":
     accuracy = correct / len(Validation_Loader.dataset)
     avg_loss = total_loss / len(Validation_Loader.dataset)
     
-
-    PATH = args.Path
+    PATH_DATA = args.Path
+    PATH_CHECKOINT = args.Path_Checkpoint
     OUTPUT = args.output
 
+    Transform_aug_Val = transforms.Compose([
+                                            transforms.ToTensor(),
+                                            transforms.Normalize(0.075,0.17)
+    ])
+    data_train = config["Data_Process"]
+
+    Loading_Val= DatasetFolder(root=PATH_DATA,
+                                loader=Loader_Data , 
+                                extensions="npy",
+                                transform=Transform_aug_Val)
+
     device = "cude" if torch.cuda.is_available() else "cpu"
-    model = VisionTrans.load_from_checkpoint(PATH).to(device)
-    visualize_attention(model, num_images=3, output=OUTPUT)
+    model = VisionTrans.load_from_checkpoint(PATH_CHECKOINT).to(device)
+    visualize_attention(model, Loading_Val,num_images=3, output=OUTPUT, devices=device)
