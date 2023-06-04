@@ -7,7 +7,7 @@ Check out this post for step-by-step guide on implementing ViT in detail.
 ### 1.1 Patch Embedding
 
 <div align="center">
-    <img src="/assets/__results___28_0.png" width="400" height="450"/>
+    <img src="/assets/__results___28_0.png" width="500" height="550"/>
 </div>
 
 <br><br>
@@ -144,7 +144,7 @@ class MultiHeadAttention(nn.Module):
 ### 1.3 Scale Dot Product Attention
 
 <div align="center">
-    <img src="/assets/mha_img_original.png"/>
+    <img src="/assets/mha_img_original.png"  width="500" height="650"/>
 </div>
 
 <br><br>
@@ -241,7 +241,7 @@ class MLP(nn.Module):
 ```
 <br><br>
 
-### 1.5 Blpck
+### 1.5 Block Multi-Heads 
 ```python
 class Block(nn.Module):
     """
