@@ -3,7 +3,7 @@ This repo provide Full Implmentation of VisionTransformer following Series of Ar
 we need to kepp mind that there's no big different only few modifications which include 
 
 <div align="left">
-    <img src="assets/vit.gif"/>
+    <img src="assets/vit.gif" width="400" height="250"/>
 </div>
 
 1. [introduction](#introduction)
@@ -75,6 +75,6 @@ Path_Checkpoint
 ```   
 
 <div align="center">
-    <img src="assets/attention.png"/>
+    <img src="assets/attention.png" width="400" height="500" />
 </div>
 
