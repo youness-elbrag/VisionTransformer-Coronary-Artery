@@ -2,8 +2,8 @@
 This repo provide Full Implmentation of VisionTransformer following Series of Article About Vision-Langauge model , in project i implmented from Scratch using **Pytorch**
 we need to kepp mind that there's no big different only few modifications which include 
 
-<div align="left">
-    <img src="assets/vit.gif" width="400" height="250"/>
+<div align="center">
+    <img src="assets/vit.gif" width="600" height="350"/>
 </div>
 
 1. [introduction](#introduction)
