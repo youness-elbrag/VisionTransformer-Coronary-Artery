@@ -3,7 +3,7 @@
 the dats used in this project contain samples of Coronary alrtrey collect from 
 The University Jordan Science and Technology 
 
-##### Data Description 
+## Data Description 
 
 1. **General description:** 
 
@@ -12,6 +12,10 @@ Coronary arteries supply blood to the heart muscle. Like all other tissues in th
 2. **Data Infos** 
 
 the Dataset was collected by colleagues at the University of Jordan Science and Technology which contains Normal and Abnormal Medical images and before used an algorithm to trace the map of Vessel blood at the Lab
+
+<div align="center">
+    <img src="samples/__results___23_0.png" width="450" height="400" />
+</div>
 
 **Licience** 
 
@@ -22,10 +26,6 @@ the Dataset was collected by colleagues at the University of Jordan Science and 
         DOI={10.34740/KAGGLE/DSV/5826841},
 
 ```
-
-<div align="center">
-    <img src="samples/__results___23_0.png" width="450" height="250" />
-</div>
 
 #### Prpcess Data
 
