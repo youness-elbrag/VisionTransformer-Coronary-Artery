@@ -3,7 +3,7 @@
 ### 1.1 Patch Embedding
 
 <div align="center">
-    <img src="./assets/Image_Patch_Embedding.png"/>
+    <img src="/assets/__results___28_0.png"/>
 </div>
 
 ```python
