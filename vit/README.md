@@ -309,7 +309,7 @@ class TrasnfomerEncoder(nn.Module):
 ### Vision Transfomer model 
 
 <div align="center">
-    <img src="/assets/vit.git"/>
+    <img src="/assets/vit.gif"/>
 </div>
 
 <br><br>
