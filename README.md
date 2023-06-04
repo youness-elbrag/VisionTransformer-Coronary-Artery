@@ -2,17 +2,14 @@
 This repo provide Full Implmentation of VisionTransformer following Series of Article About Vision-Langauge model , in project i implmented from Scratch using **Pytorch**
 we need to kepp mind that there's no big different only few modifications which include 
 
-<div align="center">
-    <img src="assets/vit.gif" width="450" height="400" />
+<div align="left">
+    <img src="assets/vit.gif"/>
 </div>
-
 
 1. [introduction](#introduction)
 2. [environment project](#environment-project)
 3. [run project](#run-project)
 5. [Predict](#Predict)
-5. [Results](#Results)
-5. [Prediction](#Prediction)
 
 ### introduction
 
@@ -78,6 +75,6 @@ Path_Checkpoint
 ```   
 
 <div align="center">
-    <img src="assets/attention.png" width="450" height="400" />
+    <img src="assets/attention.png"/>
 </div>
 
