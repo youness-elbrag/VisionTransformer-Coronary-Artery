@@ -144,7 +144,7 @@ class MultiHeadAttention(nn.Module):
 ### 1.3 Scale Dot Product Attention
 
 <div align="center">
-    <img src="/assets/mha_img_original.png"  width="500" height="650"/>
+    <img src="/assets/mha_img_original.png"  width="800" height="650"/>
 </div>
 
 <br><br>
