@@ -1,10 +1,16 @@
 ## 1. Implementations
 
+This is a simplified PyTorch implementation of the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. The goal of this project is to provide a simple and easy-to-understand implementation. The code is not optimized for speed and is not intended to be used for production.
+
+Check out this post for step-by-step guide on implementing ViT in detail.
+
 ### 1.1 Patch Embedding
 
 <div align="center">
     <img src="/assets/__results___28_0.png"/>
 </div>
+
+<br><br>
 
 ```python
 class Patch_Embedding(nn.Module):
@@ -31,8 +37,9 @@ class Patch_Embedding(nn.Module):
 
 
 <div align="center">
-    <img src="./assets/__results___46_0.png" width="450" height="300" />
+    <img src="/assets/__results___46_0.png" />
 </div>
+<br><br>
 
 ```python
 class Embeddings(nn.Module):
@@ -62,12 +69,15 @@ class Embeddings(nn.Module):
         x = self.dropout(x)
         return x
 ```
+<br><br>
 
 ### 1.2 Multi-Head Attention
 
 <div align="center">
-    <img src="./assets/heads.png" width="450" height="300" />
+    <img src="/assets/heads.png" />
 </div>
+
+<br><br>
 
 ```python
 class MultiHeadAttention(nn.Module):
@@ -134,8 +144,10 @@ class MultiHeadAttention(nn.Module):
 ### 1.3 Scale Dot Product Attention
 
 <div align="center">
-    <img src="./assets/mha_img_original.png" width="450" height="300" />
+    <img src="/assets/mha_img_original.png"/>
 </div>
+
+<br><br>
 
 ```python
 class ScaleDotProductAttention(nn.Module):
@@ -177,8 +189,10 @@ class ScaleDotProductAttention(nn.Module):
 ### 1.4 Layer Norm
 
 <div align="center">
-    <img src="./assets/layer_norm.png"/>
-</div>    
+    <img src="/assets/layer_norm.png"/>
+</div>   
+
+<br><br>
 
 ```python
 class LayerNorm(nn.Module):
@@ -258,8 +272,7 @@ class Block(nn.Module):
         else:
             return (x, attention_probs)
 ```
-
-
+<br><br>
 
 ### 1.6 TransformerEncoder
     
@@ -298,6 +311,8 @@ class TrasnfomerEncoder(nn.Module):
 <div align="center">
     <img src="./assets/vit.git"/>
 </div>
+
+<br><br>
 
 ```python 
 
